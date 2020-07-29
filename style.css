@@ -45,7 +45,7 @@ body, h1,h2,h3,h4,h5,h6,p {
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)),url(bg.jpg);
+     background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)),url(/img/bg.jpg);
      background-size: cover;
      color: white;
      padding-top: 40px;
@@ -119,13 +119,59 @@ body, h1,h2,h3,h4,h5,h6,p {
     color: white;
     font-weight: bold;
     border: 1px solid red;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     margin-top: 5px;
     margin-bottom: 80px;
     width: 205px;
+    transition: all 0.5s ease;
   
 }
+.red-button:hover {
+    border: 1px solid red;
+    background: rgb(255, 247, 247);
+    color: red;
+}
+#modal{
+    position: fixed;  
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.81);
+    z-index: 5;  
+    display: none;
+  }
+  
+  #form1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+    background: rgb(235, 182, 10);
+    margin: -110px -110px; 
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9); 
+    z-index: 6;
+    border-radius: 30px;
+    color:#000;
+    font-size: 20px;
+  }
+  .form-number {
+      text-decoration: none;
+        color: #000;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 9px;
+        transition: all 0.5s ease;
+  }
+  .form-number:hover {
+      color: white;
+      background: black;
+
+  }
 
 /* review */
 .review {
@@ -166,7 +212,14 @@ body, h1,h2,h3,h4,h5,h6,p {
     background: #f5f7f9;
     overflow: hidden;
     font-size: 13px;
+    transition: all 0.5s ease;
 }
+.cardItem:hover {
+border: 1px solid rgb(184, 177, 177);
+   background: #fc0; /* Цвет фона */
+   box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+} 
+
 .title-refrigerator {
     margin-bottom: 50px;
     margin-top: 20px;
@@ -183,20 +236,28 @@ body, h1,h2,h3,h4,h5,h6,p {
 }
 .row {
     display: grid;
-    justify-content: center;
+    justify-items: center;
     grid-template-columns: 1fr 1fr;
     padding-top: 30px;
     padding-bottom: 35px;
+    
     
 }
 .steps-item {
     width: 140px;
     height: 110px;
-   
+    position: relative;
+    transition:all 0.5s ease;
     margin: 20px;
     background: white;
     font-size: 13px;
 }
+.steps-item:hover {
+    border: 1px solid rgb(184, 177, 177);
+    background: #fc0; /* Цвет фона */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+}
+
 .steps-item p{
     position: relative;
     top: 35px
@@ -228,16 +289,29 @@ body, h1,h2,h3,h4,h5,h6,p {
     grid-template-columns: 1fr 1fr;
     text-align: center;
     margin: 20px 10px;
+    grid-gap: 15px;
 }
 .container-adv p {
     font-size: 15px;
     margin-top: 10px;
 }
-.abv-img {
-    position: relative;
-    left: 15%;
+.our-advantades {
+    display: grid;
+    justify-items: center;
+}
+ .abv-img { 
+    
     padding-top: 50px;
     width: 280px;
+} 
+.adv-step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.correct {
+    margin-bottom: 30px;
 }
 
 
@@ -250,6 +324,7 @@ body, h1,h2,h3,h4,h5,h6,p {
     justify-content: center;
     align-items: center;
     padding: 30px 15px;
+    text-align: center;
 }
 .footer-title {
     margin-bottom: 40px;
@@ -264,6 +339,7 @@ body, h1,h2,h3,h4,h5,h6,p {
 .footer-text p {
     font-size: 15px;
     font-weight: 300;
+    margin-top: 20px;
 }
 .footer-text p span {
     font-weight: bold;
@@ -296,6 +372,11 @@ body, h1,h2,h3,h4,h5,h6,p {
     margin-bottom: 10px;
     margin-right: 20px;
     margin-top: 10px;
+    transition: all ease 0.5s;
+}
+.price-item:hover {
+    font-size: 20px;   
+
 }
 .another-problem {
     background: red;
@@ -314,6 +395,79 @@ body, h1,h2,h3,h4,h5,h6,p {
     border: 1px solid gold;
     background: gold;
     padding: 5px 0;
-    
+}
+.button-a:hover {
+    border: 1px solid rgb(184, 177, 177);
+    background: #fc0; /* Цвет фона */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+}
 
+@media (min-width: 600px) {
+    .header {
+        display: grid;
+        justify-items: center;
+    }
+    .title {
+        text-align: center;
+        }
+        .title h1{
+            font-size: 30px;
+        }
+        .title h3{
+            font-size: 25px;
+        }
+        .advantages ul li{
+            font-size: 20px;
+        }
+        .form h4 {
+            font-size: 18px;
+        }
+        .review-title h2 {
+            font-size: 22px;
+        }
+        .review-title p{
+            font-size: 18px;
+        }
+        .steps-title h3 {
+            font-size: 22px;
+        }
+        .steps-title p {
+            font-size: 18px;
+        }
+        .steps-item p {
+            font-size: 16px;
+        }
+        .steps-item {
+            width: 200px;
+            height: 190px;
+
+        }
+        .steps-number {
+            left: 0;
+        }
+        .price-title h3 {
+            font-size: 22px;
+        }
+        .price-title p {
+            font-size: 18px;
+        }
+        .anoter-problem-text {
+            font-size: 22px;
+        }
+        .button-a {
+            font-size: 18px;
+        }
+        .adv-step h4{
+            font-size: 20px;
+        }
+        .adv-step p {
+            font-size: 16px;
+        }
+        .footer-text p{
+            font-size: 18px;
+        }
+        .phone-call-footer {
+            font-size: 22px;
+        }
+        
 }
